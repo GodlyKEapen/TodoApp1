@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="198600e9-5298-462a-8899-5dc82b7ec73c" name="Default Changelist" comment="" />
+    <list default="true" id="198600e9-5298-462a-8899-5dc82b7ec73c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/App/todoapp/lib/models/global.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TodoApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TodoApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/todoapp/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/main.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1hgFk0gRyLyDv3x5O8WzaST2eNI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -17,7 +26,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="SvnConfiguration">
@@ -38,5 +47,33 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="795" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600425260972" />
+    <state x="555" y="55" key="SettingsEditor" timestamp="1600755605813">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="555" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600755605813" />
+    <state x="686" y="101" width="740" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1600754278035">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="686" y="101" width="740" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1600754278035" />
+    <state x="711" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1600752821521">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="711" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1600752821521" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/App/todoapp/lib/main.dart</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/App/todoapp/lib/main.dart</url>
+          <line>80</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
