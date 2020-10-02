@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'UI/Intray/intray_page.dart';
 import 'models/global.dart';
+import 'models/widgets/intray_todo_widget.dart';
+import 'models/classes/task.dart';
+
+
 void main() {
   runApp(MyApp());
 }
@@ -40,9 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 TabBarView(
                   children: [
-                    new Container(
-                      color: darkGreyColor,
-                    ),
+                    IntrayPage(),
                     new Container(color: Colors.orange,),
                     new Container(
                       color: Colors.lightGreen,
@@ -54,29 +57,32 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 160,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(50),
-                        bottomRight: Radius.circular(50),
+                      bottomLeft: Radius.circular(50),
+                      bottomRight: Radius.circular(50),
                     ),
-                  color: Colors.white,
+                    color: Colors.white,
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text("Intray",style: intrayTitleStyle),
+                      Text("Intray", style: intrayTitleStyle),
                       Container()
                     ],
                   ),
                 ),
-               Container(
-                 width: 70,
-                 height: 70,
-                 margin: EdgeInsets.only(top: 120,left: MediaQuery.of(context).size.width*0.5 - 35),
-                 child: FloatingActionButton(
-                     child: Icon(Icons.add, size:50,),
-                     backgroundColor: redColor,
-                     onPressed: () {},
-               ),
-               ),
+                Container(
+                  width: 70,
+                  height: 70,
+                  margin: EdgeInsets.only(top: 120, left: MediaQuery
+                      .of(context)
+                      .size
+                      .width * 0.5 - 35),
+                  child: FloatingActionButton(
+                    child: Icon(Icons.add, size: 50,),
+                    backgroundColor: redColor,
+                    onPressed: () {},
+                  ),
+                ),
               ],
             ),
             appBar: AppBar(
@@ -102,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             backgroundColor: Colors.white,
           ),
-                ),
+        ),
       ),
     );
   }
