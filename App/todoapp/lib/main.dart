@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:todoapp/UI/Login/loginscreen.dart';
 import 'UI/Intray/intray_page.dart';
 import 'models/global.dart';
-import 'models/widgets/intray_todo_widget.dart';
-import 'models/classes/task.dart';
 
 
 void main() {
@@ -14,12 +13,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Todo App',
       theme: ThemeData(
 
         primarySwatch: Colors.grey,
       ),
-      home: MyHomePage(title: 'Todo app'),
+      home: FutureBuilder(
+        future: _calculation,
+        builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+          switch(snapshot.connectionState) {
+            case ConnectionState.none:
+              return Text('Press button to start.');
+            case ConnectionState.active:
+            case ConnectionState.waiting:
+              return Text('Awaiting result...');
+            case ConnectionState.done:
+              if (snapshot.hasError) return Text('Error: $(snapshot.error}');
+              return Text('Result: ${snapshot.data}');
+          }
+          return null;
+        };
+        ),
     );
   }
 }
