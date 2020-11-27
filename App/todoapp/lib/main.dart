@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Todo App',
@@ -33,15 +34,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
+ String apiKey;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
+    String apiKey = "";
     return FutureBuilder(
-      future: getApiKey(),
+      future: signinUser(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
-        String apiKey = "";
         if (snapshot.hasData) {
           apiKey = snapshot.data;
+          print(apiKey);
         } else {
           print("No data");
         }
@@ -56,6 +58,21 @@ class _MyHomePageState extends State<MyHomePage> {
       build(context);
     });
   }
+
+  Future signinUser() async {
+    String userName = "";
+    apiKey = await getApiKey();
+    if (apiKey != null) {
+      if (apiKey.length > 0) {
+        userBloc.signinUser("", "", apiKey);
+      } else {
+        print("No api key");
+      }
+    } else {
+      apiKey = "";
+    }
+      return apiKey;
+    }
 
   Future getApiKey() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -73,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 TabBarView(
                   children: [
-                    IntrayPage(),
+                    IntrayPage(apiKey: apiKey,),
                     new Container(
                       color: Colors.orange,
                     ),

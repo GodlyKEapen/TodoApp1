@@ -3,6 +3,7 @@ import 'package:http/http.dart' show Client;
 import 'dart:convert';
 import 'package:todoapp/models/classes/user.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:todoapp/models/classes/task.dart';
 
 class ApiProvider {
   Client client = Client();
@@ -33,10 +34,12 @@ class ApiProvider {
     }
   }
 
-  Future signinUser(String username, String password) async {
+  Future signinUser(String username, String password, String apiKey) async {
     final response = await client
-        .post("http://10.0.2.2:5000/api/sigin",
-        // headers: "",
+        .post("http://10.0.2.2:5000/api/signin",
+        headers: {
+          "Authorization" :apiKey
+        },
         body: jsonEncode({
           "username": username,
           "password": password,
@@ -52,7 +55,36 @@ class ApiProvider {
       throw Exception('Failed to load post');
     }
   }
-   saveApiKey(String api_key) async {
+
+  Future<List<Task>> getUserTasks(String apiKey) async {
+    final response = await client
+        .get("http://10.0.2.2:5000/api/tasks",
+        headers: {
+          "Authorization" :apiKey
+        },
+    );
+    final Map result = json.decode(response.body);
+    if (response.statusCode == 201) {
+      // if the call to the server was successful,parse the JSON
+      List<Task> tasks =[];
+      for(Map json_ in result["data"]) {
+        try {
+          tasks.add(Task.fromJson(json_));
+        }
+        catch (Exception) {
+          print(Exception);
+        }
+
+      }
+      return tasks;
+    } else {
+      // if that call was not successful, throw an error.
+      throw Exception('Failed to load post tasks' );
+    }
+  }
+
+
+  saveApiKey(String api_key) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('API_Token', api_key);
 

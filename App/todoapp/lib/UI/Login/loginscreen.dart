@@ -9,7 +9,8 @@ class LoginPage extends StatefulWidget {
   final VoidCallback login;
   final bool newUser;
 
-  const LoginPage({Key key, this.login, this.newUser}) : super (key: key);
+  const LoginPage({Key key, this.login, this.newUser})
+      : super (key: key);
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -55,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
                      fillColor:Colors.white,
                      hintText: 'Username',
                      contentPadding: const EdgeInsets.only(
-                          left:14.0, bottom: 8.0,top: 8.0),
+                          left:14.0, bottom: 8.0, top: 8.0),
                      focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(25.7),
@@ -93,7 +94,12 @@ class _LoginPageState extends State<LoginPage> {
                  ),
                  FlatButton(
                    child: Text("Sign in", style: redTodoTitle,),
-                   onPressed: () {},
+                   onPressed: () {
+                     if (usernameText.text != null ||passwordText.text !=null)
+                       userBloc.signinUser(usernameText.text,passwordText.text, "").then((_){
+                         widget.login ();
+                       });
+                   },
                  )
                ],
              ),
@@ -105,10 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                   FlatButton(
                     child: Text("create account", style: redBoldTitle),
                     onPressed: () {
-                      if (usernameText.text != null ||passwordText.text !=null)
-                        bloc.signinUser(usernameText.text,passwordText.text).then((){
-                          widget.login ();
-                        });
+
                       },
                   )
                ],
@@ -152,9 +155,10 @@ class _LoginPageState extends State<LoginPage> {
                 color: Colors.green,
                 child: Text("Sign up for gods sake"),
                 onPressed: () {
-                  User user;
-                  if (usernameController.text != null ||passwordController.text !=null || emailController.text !=null) {
-                    bloc.registerUser(
+                  if (usernameController.text != null
+                      || passwordController.text !=null
+                      || emailController.text !=null) {
+                    userBloc.registerUser(
                         usernameController.text,
                         firstnameController.text ?? "",
                         "",
