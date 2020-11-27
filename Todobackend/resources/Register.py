@@ -34,12 +34,12 @@ class Register(Resource):
             return {'message': 'API key already exists'}, 400
 
         user = User(
-             api_key = api_key,
-             firstname = json_data['firstname'],
-             lastname = json_data['lastname'],
-             emailadress = json_data['emailadress'],
-             password =json_data['password'],
-             username = json_data['username'],
+            api_key = api_key,
+            firstname = json_data['firstname'],
+            lastname = json_data['lastname'],
+            emailadress = json_data['emailadress'],
+            password =json_data['password'],
+            username = json_data['username'],
         )
         db.session.add(user)
         db.session.commit()
