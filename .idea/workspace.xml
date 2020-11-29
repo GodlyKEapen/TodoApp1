@@ -7,13 +7,9 @@
     <list default="true" id="198600e9-5298-462a-8899-5dc82b7ec73c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/todoapp/lib/UI/Intray/intray_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/UI/Intray/intray_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/todoapp/lib/UI/Login/loginscreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/UI/Login/loginscreen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/todoapp/lib/bloc/blocs/resources/api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/bloc/blocs/resources/api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/todoapp/lib/bloc/blocs/resources/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/bloc/blocs/resources/repository.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/todoapp/lib/bloc/blocs/user_bloc_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/bloc/blocs/user_bloc_provider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/todoapp/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/todoapp/lib/models/classes/task.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/models/classes/task.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/todoapp/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3874,14 +3870,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="254" height="198" key="ShowFilterAction_Filter_Popup/0.0.1536.824@0.0.1536.824" timestamp="1604139233037" />
-    <state x="190" y="59" width="740" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1606461187230">
+    <state x="190" y="59" width="740" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1606632801004">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="190" y="59" width="740" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1606461187230" />
-    <state x="711" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1606460526364">
+    <state x="190" y="59" width="740" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1606632801004" />
+    <state x="711" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1606632711282">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="711" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1606460526364" />
+    <state x="711" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1606632711282" />
     <state x="714" y="10" width="609" height="804" key="find.popup" timestamp="1603867008181">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

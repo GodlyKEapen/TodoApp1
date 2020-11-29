@@ -74,7 +74,9 @@ class ApiProvider {
         catch (Exception) {
           print(Exception);
         }
-
+      }
+      for (Task task in tasks){
+        print(task.taskId);
       }
       return tasks;
     } else {
@@ -82,7 +84,6 @@ class ApiProvider {
       throw Exception('Failed to load post tasks' );
     }
   }
-
 
   saveApiKey(String api_key) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
