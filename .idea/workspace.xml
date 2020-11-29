@@ -7,9 +7,14 @@
     <list default="true" id="198600e9-5298-462a-8899-5dc82b7ec73c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/todoapp/lib/UI/Intray/intray_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/UI/Intray/intray_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/todoapp/lib/bloc/blocs/resources/api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/bloc/blocs/resources/api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/todoapp/lib/bloc/blocs/user_bloc_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/bloc/blocs/user_bloc_provider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/todoapp/lib/models/classes/task.dart" beforeDir="false" afterPath="$PROJECT_DIR$/App/todoapp/lib/models/classes/task.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Todobackend/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Todobackend/migrations/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Todobackend/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Todobackend/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Todobackend/migrations/versions/a3035f789584_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Todobackend/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Todobackend/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Todobackend/resources/Task.py" beforeDir="false" afterPath="$PROJECT_DIR$/Todobackend/resources/Task.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3801,7 +3806,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Todobackend" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -3810,14 +3815,14 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\TodoApp\Todobackend" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\TodoApp\Todobackend" />
       <recent name="C:\Users\Asus\TodoApp\App" />
       <recent name="C:\Users\Asus\TodoApp\Todobackend\env" />
       <recent name="C:\Users\Asus\TodoApp" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\TodoApp\Todobackend" />
     </key>
   </component>
   <component name="SvnConfiguration">
