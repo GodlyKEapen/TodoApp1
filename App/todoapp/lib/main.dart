@@ -6,6 +6,7 @@ import 'models/global.dart';
 import 'package:http/http.dart' as http;
 import 'package:todoapp/models/classes/user.dart';
 import 'package:todoapp/bloc/blocs/user_bloc_provider.dart';
+import 'package:todoapp/bloc/blocs/resources/repository.dart';
 
 
 void main() {
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Todo App',
       theme: ThemeData(
         primarySwatch: Colors.grey,
+        dialogBackgroundColor: Colors.transparent
       ),
       home: MyHomePage()
     );
@@ -34,15 +36,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- String apiKey;
+  TaskBloc tasksBloc;
+  String apiKey = "";
+  Repository _repository = Repository();
+
   @override
   Widget build(BuildContext context){
-    String apiKey = "";
     return FutureBuilder(
       future: signinUser(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
           apiKey = snapshot.data;
+          tasksBloc = TaskBloc(apiKey);
           print(apiKey);
         } else {
           print("No data");
@@ -126,17 +131,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                 ),
+
                 Container(
                   width: 70,
                   height: 70,
-                  margin: EdgeInsets.only(top: 120, left: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.5 - 35),
+                  margin: EdgeInsets.only(top: 120,
+                      left: MediaQuery.of(context).size.width * 0.5 - 35),
                   child: FloatingActionButton(
                     child: Icon(Icons.add, size: 50,),
                     backgroundColor: redColor,
-                    onPressed: () {},
+                    onPressed: _showAddDialog,
                   ),
                 ),
               ],
@@ -169,6 +173,81 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  void _showAddDialog() {
+    TextEditingController taskName = new TextEditingController();
+    TextEditingController deadline = new TextEditingController();
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content: Container(
+            padding: EdgeInsets.all(20),
+            constraints: BoxConstraints.expand(height:250,),
+            decoration:BoxDecoration(
+              borderRadius:BorderRadius.all(Radius.circular(13)),
+              color: darkGreyColor
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text("Add New Task", style: whiteTitle),
+                Container(
+                  child: TextField(
+                    controller: taskName,
+                    decoration: InputDecoration(
+                      hintText: "Name of Task",
+                      enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: TextField(
+                    controller: deadline,
+                    decoration: InputDecoration(
+                      hintText: "Deadline",
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    RaisedButton(
+                      color:redColor,
+                      child: Text("Cancel", style: whiteButtonTitle,),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    RaisedButton(
+                      color:redColor,
+                      child: Text("Add", style: whiteButtonTitle,),
+                      onPressed: () {
+                        if(taskName.text != null) {
+                          addTask(taskName.text, deadline.text);
+                          Navigator.pop(context);
+                        }
+                      },
+                    )
+                  ]
+                )
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+  void addTask(String taskName, String deadline) async {
+    await _repository.addUserTask(this.apiKey, taskName, deadline);
+
+  }
   logout() async {
      SharedPreferences prefs = await SharedPreferences.getInstance();
       await prefs.setString("API_Token", "");
