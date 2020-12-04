@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="198600e9-5298-462a-8899-5dc82b7ec73c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Todobackend/resources/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/Todobackend/resources/User.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3797,7 +3798,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Todobackend" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -3806,14 +3807,14 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\TodoApp\Todobackend" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\TodoApp\Todobackend" />
       <recent name="C:\Users\Asus\TodoApp\App" />
       <recent name="C:\Users\Asus\TodoApp\Todobackend\env" />
       <recent name="C:\Users\Asus\TodoApp" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\TodoApp\Todobackend" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -3834,6 +3835,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="410" y="48" key="#Custom_Plugin_Repositories/0.0.1536.824@0.0.1536.824" timestamp="1603961855067" />
+    <state x="345" y="105" key="#Inspections" timestamp="1607056194341">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="345" y="105" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1607056194341" />
+    <state x="572" y="147" key="#PSD" timestamp="1607055947156">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="572" y="147" key="#PSD/0.0.1536.824@0.0.1536.824" timestamp="1607055947156" />
     <state x="800" y="223" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603865316154">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -3858,10 +3867,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="935" height="146" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605374462166" />
-    <state x="327" y="32" key="SettingsEditor" timestamp="1604390618579">
+    <state x="327" y="32" key="SettingsEditor" timestamp="1607055927447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="327" y="32" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604390618579" />
+    <state x="327" y="32" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607055927447" />
     <state width="254" height="198" key="ShowFilterAction_Filter_Popup" timestamp="1604139233037">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -3870,10 +3879,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="190" y="59" width="740" height="624" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1607000419408" />
-    <state x="711" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1607054159318">
+    <state x="711" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1607054551676">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="711" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1607054159318" />
+    <state x="711" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1607054551676" />
     <state x="714" y="10" width="609" height="804" key="find.popup" timestamp="1603867008181">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
